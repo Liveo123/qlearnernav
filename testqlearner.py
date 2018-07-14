@@ -166,8 +166,8 @@ def test_code():
         gamma = 0.9, \
         rar = 0.98, \
         radr = 0.999, \
-        dyna = 0, \
-        verbose=False) #initialize the learner
+        dyna = 200, \
+        verbose=True) #initialize the learner
     epochs = 500
     total_reward = test(data, epochs, learner, verbose)
     print epochs, "median total_reward" , total_reward
