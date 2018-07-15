@@ -150,7 +150,7 @@ def test_code():
     verbose = True # print lots of debug stuff if True
 
     # read in the map
-    filename = 'testworlds/world05.csv'
+    filename = 'testworlds/world01.csv'
     inf = open(filename)
     data = np.array([map(float,s.strip().split(',')) for s in inf.readlines()])
     originalmap = data.copy() #make a copy so we can revert to the original map later
@@ -167,7 +167,7 @@ def test_code():
         rar = 0.98, \
         radr = 0.999, \
         dyna = 200, \
-        verbose=True) #initialize the learner
+        verbose=False) #initialize the learner
     epochs = 500
     total_reward = test(data, epochs, learner, verbose)
     print epochs, "median total_reward" , total_reward
